@@ -5,7 +5,7 @@ and checked for ripeness.
 """
 
 from farm.corn import Corn
-
+from farm.rice import Rice
 
 
 def day_one():
@@ -24,22 +24,28 @@ def day_one():
     else:
         print("The corn crop is not ripe")
 
+
+
+def day_two():
+    print("\n🌾 Day Two: Rice")
+    
+    # 1. Rice (Pirinç) sınıfından yeni bir nesne üretiyoruz
+    my_rice = Rice()
+    
+    # 2. Pirinci suluyoruz (her sulamada 5 grain ekleniyordu)
+    my_rice.water()
+    print(f"The rice crop produced {my_rice.grains} grains")
+    
+    # 3. Şaşırtma / aktarma (transplant) yapıyoruz (10 grain ekliyordu)
+    my_rice.transplant()
+    print(f"After transplanting, the rice crop produced {my_rice.grains} grains")
+    
+    # 4. Olgunluk kontrolü (15 veya daha fazlası True döner)
+    if my_rice.ripe():
+        print("The rice crop is ripe")
+    else:
+        print("The rice crop is not ripe")
+
 if __name__ == "__main__":
     day_one()
-
-print("\n\n📝 Day Two: Rice")
-
-# 1. Instantiate a rice crop
-pass  # YOUR CODE HERE
-
-# 2. Water the rice crop
-pass  # YOUR CODE HERE
-
-# 3. Transplant the rice crop
-pass  # YOUR CODE HERE
-
-# 4. Print "The rice crop produced ## grains"
-pass  # YOUR CODE HERE
-
-# 5. Print "The rice crop is ripe" or "The rice crop is not ripe"
-pass  # YOUR CODE HERE
+    day_two()
