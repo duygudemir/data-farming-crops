@@ -1,5 +1,8 @@
-# pylint: disable=too-few-public-methods
-
-
 class Crop:
-    pass  # YOUR CODE HERE
+    def __init__(self):
+        # Corn ve Rice için ortak olan başlangıç tanesi
+        self.grains = 0
+
+    def ripe(self):
+        # Corn ve Rice için ortak olan olgunlaşma kuralı (15 ve üzeri)
+        return self.grains >= 15
